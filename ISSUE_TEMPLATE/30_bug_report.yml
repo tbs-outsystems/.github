@@ -1,0 +1,75 @@
+name: Bug Report
+description: Create a report about something that is not working.
+labels: bug
+body:
+- type: markdown
+  attributes:
+    value: |
+      ## Bug Report
+      Please enter a descriptive title and in the following provide a clear and concise description of the bug. If helpful, you can also attach screenshots.
+- type: textarea
+  id: description
+  attributes:
+    label: Description
+    placeholder: What unexpected behavior have you encountered?
+  validations:
+    required: true
+- type: textarea
+  id: expected
+  attributes:
+    label: Expected behavior
+    placeholder: How should the system have reacted?
+  validations:
+    required: false
+- type: textarea
+  id: steps
+  attributes:
+    label: Steps to reproduce
+    placeholder: |
+      1. Go to '...'
+      2. Click on '....'
+      3. Scroll down to '....'
+      4. See error
+  validations:
+    required: false
+- type: dropdown
+  id: environment
+  attributes:
+    label: Environment
+    options:
+      - Development
+      - Non-Production
+      - Production
+  validations:
+    required: false
+- type: input
+  id: module
+  attributes:
+    label: App/Module
+    placeholder: App name (and module if known)
+  validations:
+    required: false
+- type: input
+  id: url
+  attributes:
+    label: URL
+    placeholder: Paste complete URL here
+  validations:
+    required: false
+- type: textarea
+  id: system
+  attributes:
+    label: System
+    value: |
+      Operating System: 
+      Webbrowser: 
+      User account: 
+  validations:
+    required: false
+- type: textarea
+  id: remarks
+  attributes:
+    label: Remarks
+    placeholder: Is there anything else you want to mention or that will give more context about the issue?
+  validations:
+    required: false

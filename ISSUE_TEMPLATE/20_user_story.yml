@@ -1,0 +1,37 @@
+name: User Story
+description: Create a user story to define a requirement and its acceptance criteria.
+body:
+  - type: markdown
+    attributes:
+      value: Please enter a descriptive title and in the following provide a clear and concise description of the requirement.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the user story in one sentence.
+      placeholder: As [role] I want to [do something] to [reach a specific goal].
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: These criteria must be met for the user story to be accepted as done.
+      placeholder: |
+        - The user can enter login the user name and password in separate fields.
+        - The password field hides the entered characters.
+        - After the button "Login" is clicked the system checks the given credentials.
+        - On success the user is logged in and redirected to the dashboard, otherwise an invalid credentials error message is shown.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: If applicable, please provide references to related user journey map steps, mockups, etc. (one at a line).
+      placeholder: |
+        USM: [Process] / [Step number] - [Step number], [Step number], ...
+        Mockup: [link to file]
+        ...
+    validations:
+      required: false
